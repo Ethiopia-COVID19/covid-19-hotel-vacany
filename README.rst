@@ -38,12 +38,12 @@ Database setting
 Postgres container with GIS support
 
 ```
-docker run --name=postgis -d -e POSTGRES_USER=<username> -e POSTGRES_PASS=<password> -e POSTGRES_DBNAME=<password> -p 5432:5432 kartoza/postgis:9.6-2.4
+docker run --name=postgis -d -e POSTGRES_USER=<username> -e POSTGRES_PASS=<password> -e POSTGRES_DBNAME=<db_name> -p 5432:5432 kartoza/postgis:9.6-2.4
 ```
 
 Export the database URL in your shell
 
 
 ```
-export DATABASE_URL="postgres://covid19:quarantine@localhost:5432/covid19_quarantine"
+export DATABASE_URL="postgres://<username>:<password>@localhost:5432/<db_name>"
 ```
